@@ -13,6 +13,7 @@ main = do
 display :: Genome.Genome -> DisplayCallback
 display genome = do
   clear [ ColorBuffer ]
+--  GenomeDraw.getConnectionWeightColor $ negate 1.0
   renderPrimitive Points $
     mapM_ (\(x,y,z) -> vertex $ Vertex3 x y z) (GenomeDraw.genomePoints genome)
   flush
